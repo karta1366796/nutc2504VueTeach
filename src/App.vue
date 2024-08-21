@@ -19,6 +19,9 @@
           <RouterLink class="nav-link text-white" to="/user-profile"
             >User Profile</RouterLink
           >
+          <RouterLink class="nav-link text-white" to="/weather"
+            >Weather</RouterLink
+          >
         </nav>
       </div>
     </div>

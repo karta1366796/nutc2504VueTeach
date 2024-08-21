@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:3000", // 替換為你的 API 基址
+  baseURL: "http://localhost:5041", // 替換為你的 API 基址
   withCredentials: false, // 這允許跨域請求
   headers: {
     Accept: "application/json",
@@ -18,6 +18,9 @@ export default {
         password: password,
       },
     });
+  },
+  getWeatherForecast() {
+    return apiClient.get('/weatherforecast'); // 請求天氣 API
   },
 //   // 獲取單個用戶
 //   getUser(id) {
