@@ -48,6 +48,11 @@ const router = createRouter({
       component: () => import('../views/UserProfile.vue'),
       meta: { requiresAuth: true }, // 需要登錄才可訪問
     },
+    {
+      path: '/weather',
+      name: 'Weather',
+      component: () => import('../views/Weather.vue'),
+    },
   ]
 })
 
