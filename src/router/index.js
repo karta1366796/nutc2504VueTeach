@@ -9,20 +9,28 @@ const router = createRouter({
       redirect: '/login' // 進入應用後重定向到 Login 頁面
     },
     {
-      path: '/count',
-      name: 'count',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Count.vue')
-    },
-    {
       path: '/login',
       name: 'Login',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Login.vue')
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Register.vue')
+    },
+    {
+      path: '/reset',
+      name: 'Reset',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Reset.vue')
     },
     {
       path: '/product',
@@ -47,11 +55,6 @@ const router = createRouter({
       name: 'UserProfile',
       component: () => import('../views/UserProfile.vue'),
       meta: { requiresAuth: true }, // 需要登錄才可訪問
-    },
-    {
-      path: '/weather',
-      name: 'Weather',
-      component: () => import('../views/Weather.vue'),
     },
   ]
 })
